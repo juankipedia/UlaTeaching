@@ -27,7 +27,7 @@ size_t cut_bar_opt(size_t n, size_t * &t, unordered_map<size_t, size_t> & mem){
 	size_t c = 0;
 
 	for (int i = 1; i < n; ++i){
-		c = t[i] + cut_bar(n - i, t);
+		c = t[i] + cut_bar_opt(n - i, t, mem);
 		m = max(c, m);
 	}
 	mem[n] = m;
@@ -43,14 +43,14 @@ int main(){
 	unordered_map<size_t, size_t> mem;
 	mem[0] = 0;
 	clock_t begin = clock();
-	r = cut_bar(10, t);
+	r = cut_bar(5, t);
 	clock_t end = clock();
   	double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
 
   	cout << "Result Found without Dynamic Programming = {" << r << "}, found on: {" << elapsed_secs << "} seconds\n";
 
   	begin = clock();
-  	r = cut_bar_opt(4, t, mem);
+  	r = cut_bar_opt(5, t, mem);
   	end = clock();
   	elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
 	cout << "Result Found with Dynamic Programming = {" << r << "}, found on: {" << elapsed_secs << "} seconds\n";

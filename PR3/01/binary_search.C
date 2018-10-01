@@ -28,7 +28,7 @@ template<class T, class Compare> int binary_search(const T* array, const T& obje
 			return binary_search<T,Compare>(array, object, l, m - 1);
 		else if(Compare()(array[m], object))
 			return binary_search<T,Compare>(array, object, m + 1, r);
-		return(m);
+		return m;
 	}
 }
 
@@ -63,7 +63,7 @@ template<class T, class Compare> int binary_search(const T* array, const T &obje
 template<class T> class Criteria{
 	public:
 		bool operator() (const T &A, const T &B){
-			return(A < B);
+			return A < B;
 		}
 };
 
@@ -76,5 +76,5 @@ int main()
 	cout << binary_search< int, Criteria<int> >(array, 5, 0, 9) << '\n';
 
 	cout << binary_search(array, 50, 0, 9,[](const int  &A, const int &B){return(A<B);}) << '\n';
-return(0);
+return 0;
 }
