@@ -35,22 +35,23 @@ size_t cut_bar_opt(size_t n, size_t * &t, unordered_map<size_t, size_t> & mem){
 }
 
 int main(){
-	size_t *t = new size_t[11]; 
+	size_t *t = new size_t[21]; 
 	t[0] = 0; t[1] = 3; t[2] = 5; t[3] = 7; t[4] = 8; t[5] = 9; t[6] = 10; t[7] = 11; t[8] = 12; t[9] = 13; t[10] = 14;
+	t[11] = 15; t[12] = 16; t[13] = 17; t[14] = 18; t[15] = 19; t[16] = 20; t[17] = 21; t[18] = 22; t[19] = 23; t[20] = 24;
 
 	size_t r = 0;
 
 	unordered_map<size_t, size_t> mem;
 	mem[0] = 0;
 	clock_t begin = clock();
-	r = cut_bar(5, t);
+	r = cut_bar(20, t);
 	clock_t end = clock();
   	double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
 
   	cout << "Result Found without Dynamic Programming = {" << r << "}, found on: {" << elapsed_secs << "} seconds\n";
 
   	begin = clock();
-  	r = cut_bar_opt(5, t, mem);
+  	r = cut_bar_opt(20, t, mem);
   	end = clock();
   	elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
 	cout << "Result Found with Dynamic Programming = {" << r << "}, found on: {" << elapsed_secs << "} seconds\n";
