@@ -4,8 +4,6 @@ using namespace std;
 /**
 	@file binarysearch.cpp
 	@brief Declaration and Implementation on C++ of the funtion "binary_search".
-	@author Juan Diego M. Flores
-	@date 06/25/2016
 */
 
 
@@ -75,6 +73,6 @@ int main()
 	int array [] = {1, 3, 5, 21, 24, 32, 41, 44, 46, 50};
 	cout << binary_search< int, Criteria<int> >(array, 5, 0, 9) << '\n';
 
-	cout << binary_search(array, 50, 0, 9,[](const int  &A, const int &B){return(A<B);}) << '\n';
+	cout << binary_search(array, 50, 0, 9,[](const int  &A, const int &B){return( A < B);}) << '\n';
 return 0;
 }
