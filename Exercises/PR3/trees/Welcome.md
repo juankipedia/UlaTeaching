@@ -1,4 +1,4 @@
-﻿# Asignación N°3 - Programación 3 B-2018
+# Asignación N°3 - Programación 3 B-2018
 
 ### Preparadores
 Julio Lugo
@@ -18,7 +18,7 @@ Estos caminos **deben representarlos con una estructura aparte** (se recomienda 
 
 ## Entrada
 
-Recibirás inicialmente el valor de N (1 < N <= 10^9),  seguido de una lista de N  enteros P sin repetición siguiendo el orden de inserción indicado arriba.
+Recibirás inicialmente el valor de N (1 < N <= 10^9),  seguido de una lista de N  enteros P (1<= P <= 10 ^ 6) sin repetición siguiendo el orden de inserción indicado arriba.
 Posteriormente, se dará una lista de N*N entradas. Cada uno de los elementos  de esta lista representa una **búsqueda** ( puede aceptar repetidos) sobre el árbol haciendo uso del recorrido prefijo, que modificarán las probabilidades de sus caminos.
 
 ```
